@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.10 on win32)" generated="20221014 15:27:58.087" rpa="false" schemaversion="2">
+<suite id="s1" name="Simple" source="c:\Users\mica\GitHub\RobotFrameworkTesting\tests\simple.robot">
+<test id="s1-t1" name="TestCase1">
+<kw name="Log" library="BuiltIn">
+<arg>"Hello World!"</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221014 15:27:58.132" level="INFO">"Hello World!"</msg>
+<status status="PASS" starttime="20221014 15:27:58.131" endtime="20221014 15:27:58.134"/>
+</kw>
+<kw name="Read" library="Actuator">
+<arg>PARAMETER_0</arg>
+<msg timestamp="20221014 15:27:58.135" level="INFO">Usb2Lin.get_lin_config - reference=0, value=0
+Parameters.read - ini_name=PARAMETER_0, value=0
+Actuator.read - ini_name=PARAMETER_0, value=0</msg>
+<status status="PASS" starttime="20221014 15:27:58.134" endtime="20221014 15:27:58.135"/>
+</kw>
+<status status="PASS" starttime="20221014 15:27:58.130" endtime="20221014 15:27:58.136"/>
+</test>
+<status status="PASS" starttime="20221014 15:27:58.092" endtime="20221014 15:27:58.138"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Simple">Simple</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

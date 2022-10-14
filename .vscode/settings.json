@@ -1,0 +1,8 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "robot.pythonpath": [
+        "${workspace}",
+        "${workspace}/libraries",
+        "${workspace}/resources",
+    ],
+}
