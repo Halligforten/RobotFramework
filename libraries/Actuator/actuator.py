@@ -1,10 +1,11 @@
-from Usb2Lin import usb_2_lin
-from Parameters import parameters
+from .parameters import Parameters
+from .usb_2_lin import Usb2Lin
 
 class Actuator:
     def __init__(self) -> None:
-        self.usb_2_lin = usb_2_lin.Usb2Lin()
-        self.parameters = parameters.Parameters(self.usb_2_lin)
+        self.usb_2_lin = Usb2Lin()
+        self.parameters = Parameters(self.usb_2_lin)
+        self.usb_2_lin.start()
     
     def read(self, ini_name : str) -> int:
         value = self.parameters.read(ini_name)

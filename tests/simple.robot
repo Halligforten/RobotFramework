@@ -7,5 +7,6 @@ Library    Actuator
 *** Test Cases ***
 TestCase1
     Log    "Hello World!"
-    Read    PARAMETER_0
+    ${position}    Read    POSITION
+    Log    ${position}
     
