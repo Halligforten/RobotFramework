@@ -1,12 +1,15 @@
-
 *** Settings ***
-Library    Actuator
+Resource    Common.resource
 
-*** Variables ***
+Test Setup    Setup Actuator For Test
 
 *** Test Cases ***
-TestCase1
-    Log    "Hello World!"
-    ${position}    Read    POSITION
-    Log    ${position}
-    
+Verify Run EOS In Out In
+    Run Until EOS    Out
+    Eos Must Be    Out
+    Run Until EOS    In
+    Eos Must Be    In
+
+Verify Run To A Target Position
+    Run Until Target Position    250
+    Position Must Be    250   
