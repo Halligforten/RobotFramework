@@ -4,5 +4,6 @@
         "${workspace}",
         "${workspace}/libraries",
         "${workspace}/resources",
+        "C:/Python/Lib/site-packages"
     ],
 }

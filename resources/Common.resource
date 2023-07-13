@@ -1,17 +1,18 @@
 *** Settings ***
+Library    Modbus.Modbus${MODBUS_INTERFACE}
+
 Resource    Conditional.resource
 Resource    Waiting.resource
-Resource    RunHandling.resource
 Resource    GetSet.resource
 
-*** Variables ***
-${DEFAULT_SPEED}    100
-
 *** Keywords ***
-Setup Actuator For Test
-    Set Parameter    SPEED    ${DEFAULT_SPEED}
-    Run Until EOS    In
+Modbus Tcp Test Setup
+    Initialize Ethernet
+    Get Ready For Running
 
+Modbus Tcp Test Teardown
+    Deinitialize Ethernet
+    
 Run Until EOS
     [Arguments]    ${direction}
     
